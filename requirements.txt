@@ -1,0 +1,12 @@
+Keras>2.2.0
+tensorflow==2.3.0
+flask
+numpy
+pandas
+Pillow==8.0.1
+scipy==1.1.0
+gunicorn==18.0.0
+pybase64==1.0.2
+h5py<3.0.0
+
+
