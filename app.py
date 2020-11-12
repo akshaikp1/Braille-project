@@ -38,7 +38,7 @@ def predict():
         print(np.argmax(out, axis=1))
         
         class_list = {'a': 0, 'apostrophe': 1, 'b': 2, 'c': 3, 'capitalize': 4, 'colon': 5, 'comma': 6, 'd': 7, 'e': 8, 'exclamation': 9, 'f': 10, 'g': 11, 'h': 12, 'hyphen': 13, 'i': 14, 'j': 15, 'k': 16, 'l': 17, 'm': 18, 'n': 19, 'number': 20, 'o': 21, 'p': 22, 'period': 23, 'q': 24, 'question': 25, 'r': 26, 's': 27, 'semicolon': 28, 'space': 29, 't': 30, 'u': 31, 'v': 32, 'w': 33, 'x': 34, 'y': 35, 'z': 36}
-        response = np.array_str(np.argmax(out, axis=1))
+        response = np.argmax(out, axis=1)
         for key,value in class_list.items():
             if response[0] == value:
                 return key
