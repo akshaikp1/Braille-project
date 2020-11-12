@@ -1,0 +1,31 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+}
+
+body{
+    background-color:#424242;
+}
+
+h1{
+    margin-top: 50px;
+    padding: 50px 0px;
+    color: #fff;
+    font-size: 50px;
+}
+
+.btn{
+    cursor: pointer;
+    display: inline-block;
+    border: 0;
+    font-weight: bold;
+    padding: 10px 20px;
+    background: #262626;
+    background: #f4f4f4;
+    color: #333;
+    font-size: 15px;;
+}
