@@ -18,11 +18,34 @@
             </fieldset>
             <br>
             <fieldset>
-                <button class="btn" id="upload-file-btn" type="button">Upload</button>
+                <button id="upload-file-btn" class="btn" id="upload-file-btn" type="button">Upload</button>
             </fieldset>
         </form>
         <br><br>
-        <p id='result'>abc</p>
+        <p id='result'></p>
     </div>
+
+
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+	<script type="text/javascript">
+
+		$("#upload-file-btn").click(function () {
+			var $SCRIPT_ROOT = {{ request.script_root| tojson | safe
+		}};
+		var form_data = new FormData($('#upload-file')[0]);
+
+		$.ajax({
+			type: "POST",
+			url: $SCRIPT_ROOT + "/predict/",
+			data: form_data,
+			contentType: false,
+			cache: false,
+			processData: false,
+			success: function (data) {
+				$('#result').text('Output: ' + data);
+			}
+		});
+		});
+	</script>
 </body>
 </html>
