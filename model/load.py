@@ -8,7 +8,7 @@ import tensorflow as tf
 graph = tf.compat.v1.get_default_graph()
 def init():
 	with graph.as_default():
-		loaded_model = load_model('model.hdf5')
+		loaded_model = load_model('model_new.hdf5')
 		print("Loaded Model from disk")
 
 		#compile and evaluate loaded model
